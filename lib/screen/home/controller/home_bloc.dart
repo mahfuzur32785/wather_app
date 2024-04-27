@@ -24,12 +24,11 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
   void _getData(
       HomeEventGetData event, Emitter<HomeState> emit) async {
-
-    weatherModel = null;
     emit(const HomeStateLoading());
     final uri = Uri.parse(RemoteUrls.getForecastData).replace(
       queryParameters: {
         'q': event.location,
+        'days': event.days,
         'key': "2e48f700fd434f80b9d140128242604",
       },
     );

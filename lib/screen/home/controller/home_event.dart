@@ -8,12 +8,13 @@ abstract class HomeEvent extends Equatable {
 }
 class HomeEventGetData extends HomeEvent {
   final String location;
-  const HomeEventGetData(this.location);
+  final String days;
+  const HomeEventGetData({required this.location, required this.days});
 
   @override
-  List<Object> get props => [location,];
+  List<Object> get props => [location,days];
 }
 
-class HomeEventSubmit extends HomeEvent {
-  const HomeEventSubmit();
+class HomeEventLoading extends HomeEvent {
+  const HomeEventLoading();
 }

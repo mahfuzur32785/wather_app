@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class Utils {
   static final _selectedDate = DateTime.now();
@@ -76,6 +77,42 @@ class Utils {
         );
       },
     );
+  }
+
+
+  static String formatDate(var date) {
+    late DateTime dateTime;
+    if (date is String) {
+      dateTime = DateTime.parse(date);
+    } else {
+      dateTime = date;
+    }
+
+    return DateFormat.yMd().format(dateTime.toLocal());
+  }
+
+  static String formatDateByMoth(var date) {
+    var format = DateFormat("MM / dd");
+    late DateTime dateTime;
+    if (date is String) {
+      dateTime = DateTime.parse(date);
+    } else {
+      dateTime = date;
+    }
+
+    return format.format(dateTime.toLocal());
+  }
+
+  static String formatDateByDayName(var date) {
+    var format = DateFormat('EEEE');
+    late DateTime dateTime;
+    if (date is String) {
+      dateTime = DateTime.parse(date);
+    } else {
+      dateTime = date;
+    }
+
+    return format.format(dateTime.toLocal());
   }
 
   static int calculateMaxDays(String startDate, String endDate) {
