@@ -1,5 +1,5 @@
 A simplw weather application.
-Functionality:
+#Functionality:
 1. Weather public api call.
 2. It will show user current location weather.
 3. User can manually add a city for show weather.
