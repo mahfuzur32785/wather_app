@@ -97,10 +97,10 @@ class _SettingScreenState extends State<SettingScreen> {
                 return suggestionsBox;
               },
               onSuggestionSelected: (Prediction suggestion) async {
-                context.read<SettingBloc>().locationController.text = suggestion.description.toString().trim().substring(0, suggestion.description.toString().trim().indexOf(','));
-                print("Final value ${suggestion.description.toString().trim().substring(0, suggestion.description.toString().trim().indexOf(','))}");
-                context.read<SettingBloc>().add(SettingEventLocation(suggestion.description.toString().trim().substring(0, suggestion.description.toString().trim().indexOf(','))));
-                final location = await getLocation(suggestion.description.toString().trim().substring(0, suggestion.description.toString().trim().indexOf(',')), 'locality', "AIzaSyCGYnCh2Uusd7iASDhsUCxvbFgkSifkkTM");
+                context.read<SettingBloc>().locationController.text = suggestion.description.toString().trim()/*.substring(0, suggestion.description.toString().trim().indexOf(','))*/;
+                print("Final value ${suggestion.description.toString().trim()/*.substring(0, suggestion.description.toString().trim().indexOf(','))*/}");
+                context.read<SettingBloc>().add(SettingEventLocation(suggestion.description.toString().trim()/*.substring(0, suggestion.description.toString().trim().indexOf(','))*/));
+                final location = await getLocation(suggestion.description.toString().trim()/*.substring(0, suggestion.description.toString().trim().indexOf(','))*/, 'locality', "AIzaSyCGYnCh2Uusd7iASDhsUCxvbFgkSifkkTM");
             
                 // print('Lat & Lang is: ${double.parse(location['lat']).toDouble().toStringAsFixed(2)}, ${double.parse(location['lng']).toDouble().toStringAsFixed(2)}');
                 print('Lat & Lang is: ${location.results?[0].geometry?.location?.lat?.toStringAsFixed(2)}, ${location.results?[0].geometry?.location?.lng?.toStringAsFixed(2)}');
