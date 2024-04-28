@@ -58,7 +58,7 @@ class CustomImage extends StatelessWidget {
         height: height,
         width: width,
         progressIndicatorBuilder: (context, url, downloadProgress) => Center(
-            child: CircularProgressIndicator(value: downloadProgress.progress)),
+            child: CircularProgressIndicator(value: downloadProgress.progress,color: Colors.white)),
         errorWidget: (context, url, error) => const Image(
           image: AssetImage("assets/images/default.png"),
           fit: BoxFit.cover,

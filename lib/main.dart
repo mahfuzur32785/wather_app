@@ -7,6 +7,7 @@ import 'package:watherapp/core/remote_name.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:watherapp/screen/home/controller/home_bloc.dart';
 import 'package:watherapp/screen/home/ripository/home_repository.dart';
+import 'package:watherapp/screen/setting/controller/setting_bloc.dart';
 
 late final SharedPreferences _sharedPreferences;
 
@@ -54,6 +55,9 @@ class MyApp extends StatelessWidget {
             create: (BuildContext context) => HomeBloc(
               homeRepository: context.read(),
             ),
+          ),
+          BlocProvider<SettingBloc>(
+            create: (BuildContext context) => SettingBloc(),
           ),
         ],
         child: MaterialApp(
