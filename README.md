@@ -1,16 +1,12 @@
-# watherapp
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+A simplw weather application.
+Functionality:
+1. Weather public api call.
+2. It will show user current location weather.
+3. User can manually add a city for show weather.
+4. C to F unit change option added.
+5. App close pop-up dialog added.
+6. Bloc state management implementation.
+7.  Avoid sate state management.
+8.  .apk file uploaded.
+9. Project output screenshot: (https://github.com/mahfuzur32785/wather_app/assets/70847131/cea003d8-0498-4c11-a55a-c86e5bae6689)(https://github.com/mahfuzur32785/wather_app/assets/70847131/1c8f8dab-7fd3-41e4-bdab-721b1aaa4c09)
+  
